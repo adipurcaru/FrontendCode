@@ -46,9 +46,12 @@
             {{employee.managerId.firstName}} {{employee.managerId.lastName}}
         </td>
         <td class="text-center">
-            {{employee.departmentId.departmentName}}
+        {{employee.departmentId.departmentName}}
         </td>
         <!--TODO #HR5 add View button-->
-
+        <td class="text-center">
+            <button ng-click="viewEmployee(employee.employeeId)">View</button>
+        </td>
     </tr>
 </table>
+
