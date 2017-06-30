@@ -1,0 +1,33 @@
+<style>
+    input{
+        display:block;
+    }
+</style>
+
+<div>
+    <input type="text" placeholder="First Name" ng-model="user.firstName"/>
+    <input type="text" placeholder="Last Name" ng-model="user.lastName"/>
+    <input type="text" placeholder="Email" ng-model="user.email"/>
+    <input type="text" placeholder="Phone Number" ng-model="user.phone"/>
+<br>
+    <button ng-click="back()">Back</button>
+    <button ng-click="reset()">Reset</button>
+    <button ng-click="save()">Save</button>
+    <button ng-click="showOrHide()">Show/hide User List</button>
+</div>
+
+<table ng-if="showHide">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    <tr ng-repeat="user in users">
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phone}}</td>
+    </tr>
+
+</table>

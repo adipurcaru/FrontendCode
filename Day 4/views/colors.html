@@ -1,0 +1,20 @@
+
+
+    <select ng-options="color.text for color in colors track by color.text" ng-change="changeColor()" ng-model="selected"></select>
+    <select ng-options="color.text group by color.type for color in colors " ng-model="selected2"></select>
+    <br/>
+    <input type="text"  ng-model="selected3"/>
+    <br/>
+    <span ng-class="selected.class">Some text</span><br/><br/>
+
+    Filter by:<input type="text" ng-model="firstFilter"/><br>
+    Order by: <input type="text" ng-model="secondFilter"/>
+
+    <table>
+        <tr>
+            <th>Text</th>
+        </tr>
+        <tr ng-repeat="color in colors | orderBy:secondFilter | filter: firstFilter">
+            <td>{{color.text}}</td>
+        </tr>
+    </table>
