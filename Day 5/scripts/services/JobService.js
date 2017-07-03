@@ -1,7 +1,10 @@
-hrApp.service('EmployeeService', ['$http', 'CommonResourcesFactory', function ($http, CommonResourcesFactory) {
+/**
+ * Created by Adrian.Purcaru on 03/07/2017.
+ */
+hrApp.service('JobService', ['$http', 'CommonResourcesFactory', function ($http, CommonResourcesFactory) {
         return {
-            findById: function (employeeId) {
-                return $http.get(CommonResourcesFactory.findOneEmployeeUrl + employeeId)
+            findById: function (jobId) {
+                return $http.get(CommonResourcesFactory.findOneJobUrl + jobId)
                     .success(function (data) {
                         return data;
                     })

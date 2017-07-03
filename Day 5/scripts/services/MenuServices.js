@@ -8,3 +8,15 @@ hrApp.value('EmployeeActionsService', [
             url: "#/employeeAdd"
         }
     ]);
+
+hrApp.value('JobsActionsService', [
+    {
+        label: "List jobs",
+        url: "#/jobList"
+    },
+    {
+        label: "Add job",
+        url: "#/jobAdd"
+    }
+]);
+
