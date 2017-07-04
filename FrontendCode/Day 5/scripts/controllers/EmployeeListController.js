@@ -60,7 +60,7 @@ hrApp.controller('EmployeeListController', ['$scope', '$http', '$location', 'Com
             $location.url('/employeeEdit/' + employeeId);
         };
         $scope.deleteRow = function(employee){
-            $http({url: CommonResourcesFactory.deleteEmployeeUrl, method: 'POST'})
+            $http({url: CommonResourcesFactory.deleteEmployeeUrl, method: 'DELETE'})
                 .success(function (data, status, headers, config) {
                     $location.url('/employeeList/');
             })
